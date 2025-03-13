@@ -61,7 +61,6 @@
         <Setter Property="BorderBrush" Value="#FFD8E2E6" />
         <Setter Property="Background" Value="#FFEEF4F6" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
-        <Setter Property="HorizontalAlignment" Value="Center" />
         <Setter Property="Padding" Value="5 0" />
         <Setter Property="Effect">
             <Setter.Value>

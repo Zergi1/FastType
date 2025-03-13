@@ -20,6 +20,18 @@
            
         </Grid.RowDefinitions>
 
+        <TextBlock Name="TypingTutorTbl" FontSize="35" Foreground="#0a335c"
+                   FontWeight="SemiBold" VerticalAlignment="Center"
+                   HorizontalAlignment="Center" Text="тестовый текст, который очень сложно печатать"/>
+
+        <TextBox Name="TypingTutorTb" Grid.Row="2" Style="{StaticResource TypingTutorTextBox}"/>
+
+        <!-- #region статистика -->
+
+        <!-- endregion -->
+
+        <!-- #region Клавиатура -->
+        <Viewbox Grid.Row="6" HorizontalAlignment="Center">
         <Grid Name="KeyboardGrid" Grid.Row="6">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
@@ -94,10 +106,14 @@
                 <Button Content="."  Style="{StaticResource PurpleKeyboardKey}"/>
                 <Button Content="Shift" Width="125" Style="{StaticResource GrayKeyboardKey}"/>
             </StackPanel>
-            <StackPanel Grid.Row="8" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Content="Space" Width="350" Style="{StaticResource GrayKeyboardKey}"/>
-            </StackPanel>
+                <StackPanel Grid.Row="8" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Content="Space" Width="350" Style="{StaticResource GrayKeyboardKey}"/>
+                </StackPanel>
+            </Grid>
+
+           
             
-        </Grid>
+       </Viewbox>
+        <!-- endregion -->
     </Grid>
 </Page>
