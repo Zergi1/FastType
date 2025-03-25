@@ -8,7 +8,7 @@
       d:DesignHeight="582" d:DesignWidth="1240"
       Title="Тренажор для печати">
 
-    <Grid>
+    <Grid Background="white">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition Height="20"/>
@@ -43,7 +43,7 @@
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
             <!--Style="{StaticResource IconButton}"-->
-            <Button  Focusable="False">
+            <Button Style="{StaticResource IconButton}"  Focusable="False">
                 <Button.Content>
                     <Image Source="/Resources/Images/reload-icon.png" />
                 </Button.Content>
@@ -88,7 +88,7 @@
                 <Button Tag="D0" Content="0"  Style="{StaticResource PurpleKeyboardKey}"/>
                 <Button Tag="OemMinus" Content="-"  Style="{StaticResource PurpleKeyboardKey}"/>
                 <Button Tag="OemPlus" Content="="  Style="{StaticResource PurpleKeyboardKey}"/>
-                <Button Tag="Back" Content="BackSpace" Width="80" Style="{StaticResource GrayKeyboardKey}"/>
+                    <Button Tag="Back" Content="←" Width="80" Style="{StaticResource GrayKeyboardKey}"/>
             </StackPanel>
             <StackPanel Grid.Row="2" Orientation="Horizontal"  HorizontalAlignment="Center">
                     <Button Tag="Tab" Content="Tab" Width="80" Style="{StaticResource GrayKeyboardKey}"/>

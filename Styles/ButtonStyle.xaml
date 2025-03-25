@@ -3,7 +3,9 @@
 
     <Style TargetType="Button" x:Key="MenuButton">
         <Setter Property="FontSize" Value="20"/>
-        <Setter Property="FontFamily" Value="\Resources\Fonts\Manrope-Bold.ttf"/>
+        <Setter Property="FontFamily" Value="\Fonts\#Manrope"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="#0a335c"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Foreground" Value="#0a335c"/>
         <Setter Property="Padding" Value="20 0"/>
@@ -14,14 +16,11 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Padding="{TemplateBinding Padding}" 
-                            BorderThickness="{TemplateBinding BorderThickness}" 
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            Background="{TemplateBinding Background}"
-                            CornerRadius="10">
-                        <ContentPresenter HorizontalAlignment="Center"
-                                         VerticalAlignment="Center"/>
+                    <Border Padding="{TemplateBinding Padding}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}"
+                            Background="{TemplateBinding Background}" CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Border>
+
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="BorderBrush" Value="#FFDBE2E5"/>
@@ -35,15 +34,70 @@
             </Setter.Value>
         </Setter>
     </Style>
+
     <Style TargetType="Button" x:Key="DefaultButton">
         <Setter Property="FontSize" Value="20"/>
-        <Setter Property="FontFamily" Value="\Resources\Fonts\Manrope-ExtraBold.ttf"/>
+        <Setter Property="FontFamily" Value="\Resouces\Fonts\#Manrope"/>
         <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="#0a335c"/>
+        <Setter Property="Padding" Value="20 0"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="BorderBrush" Value="#FF0FAEFB"/>
+        <Setter Property="Background" Value="#FFDFF4FE"/>
+        <Setter Property="Cursor" Value="Hand"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Padding="{TemplateBinding Padding}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderThickness" Value="2 2 2 5"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="BorderThickness" Value="2"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="Button" x:Key="IconButton">
+        <Setter Property="Padding" Value="10"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Width" Value="50"/>
+        <Setter Property="Cursor" Value="Hand"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Padding="{TemplateBinding Padding}"
+                         BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderThickness" Value="2"/>
+                            <Setter Property="BorderBrush" Value="#0FAEFB"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 
     <Style TargetType="Button" x:Key="KeyboardKey">
-        <Setter Property="FontSize" Value="18"/>
-        <Setter Property="Background" Value="LightBlue"/>
+        <Setter Property="Background" Value="LightBlue" />
         <Setter Property="BorderBrush" Value="Blue"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="Width" Value="50"/>
@@ -51,7 +105,7 @@
         <Setter Property="Margin" Value="5 0"/>
         <Setter Property="Focusable" Value="False"/>
         <Setter Property="Foreground" Value="#0a335c"/>
-        
+
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -63,55 +117,44 @@
                         <ContentPresenter HorizontalAlignment="Center"
                                          VerticalAlignment="Center"/>
                     </Border>
-
                 </ControlTemplate>
             </Setter.Value>
-            </Setter>
+        </Setter>
     </Style>
 
-
-
     <Style TargetType="Button" x:Key="GrayKeyboardKey" BasedOn="{StaticResource KeyboardKey}">
-        <Setter Property="Background" Value="#FFAEF2C9"/>
+        <Setter Property="Background" Value="#FFDBE2E5"/>
         <Setter Property="BorderBrush" Value="#FF4c5052"/>
         <Setter Property="BorderThickness" Value="0"/>
-        
-    </Style> 
-    
+    </Style>
+
     <Style TargetType="Button" x:Key="PurpleKeyboardKey" BasedOn="{StaticResource KeyboardKey}">
         <Setter Property="Background" Value="#FFC9C9FD"/>
-        <Setter Property="BorderBrush" Value="#FF2C2D69"/>
+        <Setter Property="BorderBrush" Value="#FF2c2d69"/>
         <Setter Property="BorderThickness" Value="0"/>
+    </Style>
 
-    </Style> 
-    
     <Style TargetType="Button" x:Key="GreenKeyboardKey" BasedOn="{StaticResource KeyboardKey}">
         <Setter Property="Background" Value="#FFAEF2C9"/>
-        <Setter Property="BorderBrush" Value="#FF1C703E"/>
+        <Setter Property="BorderBrush" Value="#ff1c703e"/>
         <Setter Property="BorderThickness" Value="0"/>
+    </Style>
 
-
-    </Style> 
-    
     <Style TargetType="Button" x:Key="RedKeyboardKey" BasedOn="{StaticResource KeyboardKey}">
         <Setter Property="Background" Value="#FFFEBDCA"/>
-        <Setter Property="BorderBrush" Value="#FF81162A"/>
+        <Setter Property="BorderBrush" Value="#FF81162a"/>
         <Setter Property="BorderThickness" Value="0"/>
+    </Style>
 
-
-    </Style>   
     <Style TargetType="Button" x:Key="BlueKeyboardKey" BasedOn="{StaticResource KeyboardKey}">
         <Setter Property="Background" Value="#FF98E9E5"/>
-        <Setter Property="BorderBrush" Value="#FF07635F"/>
+        <Setter Property="BorderBrush" Value="#FF07635f"/>
         <Setter Property="BorderThickness" Value="0"/>
+    </Style>
 
-
-    </Style>   
     <Style TargetType="Button" x:Key="YellowKeyboardKey" BasedOn="{StaticResource KeyboardKey}">
         <Setter Property="Background" Value="#FFFFEA9F"/>
         <Setter Property="BorderBrush" Value="#FF806515"/>
         <Setter Property="BorderThickness" Value="0"/>
-
-
-    </Style> 
+    </Style>
 </ResourceDictionary>
