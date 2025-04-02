@@ -40,12 +40,12 @@
                 <ColumnDefinition Width="10"/>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="10"/>
-                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <!--Style="{StaticResource IconButton}"-->
-            <Button Style="{StaticResource IconButton}"  Focusable="False">
+            <Button Style="{StaticResource IconButton}" Name="RestsrtBtn" Click="RestsrtBtn_Click" Focusable="False">
                 <Button.Content>
-                    <Image Source="/Resources/Images/reload-icon.png" />
+                    <Image  Source="/Resources/Images/reload-icon.png" />
                 </Button.Content>
             </Button>
             <ProgressBar Name="TypingProgressPb" Grid.Column="2" Minimum="0" Maximum="100" Height="25"
