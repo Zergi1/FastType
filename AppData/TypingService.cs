@@ -72,6 +72,7 @@ namespace FastType.AppData
         {
             var button = FindButtonByKey(e.Key);
             if (button != null)
+
             {
                 button.BorderThickness = new Thickness(2.0, 2.0, 2.0, 4.0);
             }
