@@ -1,16 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FastType.View.Pages;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace FastType.View.Windows
 {
@@ -22,6 +11,21 @@ namespace FastType.View.Windows
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void TypingTutorBtn_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainFraime.Navigate(new TypingTutorPage());
+        }
+
+        private void RatingBtn_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainFraime.Navigate(new RatingPage());
+        }
+
+        private void ProfileBtn_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainFraime.Navigate(new ProfilePage());
         }
     }
 }

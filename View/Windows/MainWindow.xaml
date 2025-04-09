@@ -5,8 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FastType.View.Windows"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Главное окно" MinHeight="720" MinWidth="1280" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="White">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <!-- #region Меню -->
+        <Grid Height="70">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="FastType" Style="{StaticResource LogoTextBlock}"/>
+
+            <Button Name="TypingTutorBtn" Grid.Column="2" Content="Тренажёр" Style="{StaticResource MenuButton}" Click="TypingTutorBtn_Click_1"/>
+
+            <Button Name="RatingBtn" Click="RatingBtn_Click_1"  Grid.Column="4" Content="Рейтинг" Style="{StaticResource MenuButton}"/>
+
+            <Button Name="ProfileBtn" Click="ProfileBtn_Click_1"  Grid.Column="8" Content="Профиль" Style="{StaticResource MenuButton}"/>
+        </Grid>
+        <!-- #endregion -->
+
+        <!-- #region Страничная навигация -->
+        <Frame Name="MainFraime" Grid.Row="2" NavigationUIVisibility="Hidden"/>
+        <!-- #endregion -->
+
     </Grid>
 </Window>
